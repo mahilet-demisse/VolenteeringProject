@@ -17,6 +17,17 @@ public abstract class Person {
 	
 	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
+	
+	@Embedded
+	private Address adress;
+
+	public Address getAdress() {
+		return adress;
+	}
+
+	public void setAdress(Address adress) {
+		this.adress = adress;
+	}
 
 	public Person(){
 		
