@@ -1,0 +1,49 @@
+package VolenteeringProject.Model;
+
+import java.util.Date;
+
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+
+public abstract class Person {
+	@Id
+	@GeneratedValue
+	private int person_Id;
+
+	private String firstName;
+	private String lastName;
+	
+	@Temporal(TemporalType.DATE)
+	private Date dateOfBirth;
+
+	public Person(){
+		
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+}
