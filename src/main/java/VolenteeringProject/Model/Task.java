@@ -78,4 +78,13 @@ private Date end;
 	@OneToMany(mappedBy="task")
 List<Skill>skils=new ArrayList<Skill>();
 	
+	 @OneToMany(mappedBy="task")
+	List<Volenteer>volenteers=new ArrayList<Volenteer>();
+	 
+	 void addVolenteer(Volenteer v){
+		 
+		 volenteers.add(v);
+	 }
+	
+	
 }

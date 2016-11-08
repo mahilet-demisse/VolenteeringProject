@@ -15,5 +15,12 @@ public class Volenteer extends Person{
 	@OneToMany(mappedBy="volenteer")
 	private List<Project>project=new ArrayList<Project>();
 	
+	@ManyToOne
+	@JoinColumn(name="task_id")
+	
+	private Task task;
+	
+	
+	
 	
 }

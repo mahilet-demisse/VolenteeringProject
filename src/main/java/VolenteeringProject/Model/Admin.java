@@ -1,5 +1,6 @@
 package VolenteeringProject.Model;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -15,20 +16,20 @@ public Admin(){
 }
 
 
-Project create_project(Date start,Date end,List<Task> task){
+public Project create_project(Date start,Date end,List<Task> task){
 
 	return new Project(start,end,task);
 	
 }
 
-void update_task(Task t,Status s){
+public void update_task(Task t,Status s){
 	
 t.setStatus(s);
 	
 	
 }
 
-void update_project(Project p,Status s){
+public void update_project(Project p,Status s){
 	p.setStatus(s);
 	
 }
